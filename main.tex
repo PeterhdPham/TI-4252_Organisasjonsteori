@@ -8,7 +8,6 @@
 \usepackage{siunitx}
 \setlength{\parindent}{0pt} 
 \setlength{\parskip}{2ex}
-\usepackage{fixltx2e}
 \usepackage{amsmath}
 \usepackage[pdftex, pdfborderstyle={/S/U/W 0}]{hyperref}
 \usepackage{graphicx}
@@ -16,28 +15,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{tabularx}
 \usepackage{multirow}
-\usepackage{tikz}
-\usepackage[american]{circuitikz}
-\usetikzlibrary{shapes.geometric, arrows}
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\usepackage{floatrow}
-\floatsetup[table]{capposition=top}
-% \usepackage[europeanresistors]{circuitikz}
-\tikzset{opampdownlbl/.style={
-            below,
-            draw=none,
-            append after command={
-                (\tikzlastnode.north) edge ([shift={(-5pt,0pt)}]\tikzlastnode.north) edge ([shift={(+5pt,0pt)}]\tikzlastnode.north)
-            }},
-        opampuplbl/.style={
-            above,
-            draw=none,
-            append after command={
-                (\tikzlastnode.south) edge ([shift={(-5pt,0pt)}]\tikzlastnode.south) edge ([shift={(+5pt,0pt)}]\tikzlastnode.south)
-            }}}
+
 
 % roman numerals
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
@@ -129,25 +107,27 @@
 \end{minipage}
 \begin{minipage}[c]{0.85\textwidth}
 
+
 \renewcommand{\arraystretch}{1.7}
 \large 
 \begin{tabularx}{\textwidth}{|X|X|}
 \hline
 \multicolumn{2}{|l|}{} \\
-\multicolumn{2}{|l|}{\huge \textbf{TTT4280 -- Lab}} \\
+\multicolumn{2}{|l|}{\huge \textbf{TIØ4252 -- Organisasjonsteori}} \\
 \multicolumn{2}{|l|}{}  \\
 \hline
-\multicolumn{2}{|l|}{\textbf{Tittel}: 
+\multicolumn{2}{|l|}{\textbf{Tittel}:  
 %Skriv inn tittel her:------------------------------------------
-Tittel
+Organisasjonsteori
 } \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Skrevet av}:
 %Skriv inn forfattere her:--------------------------------------
+Insperanummer
 } \\
 \hline
 %Skriv inn versjon og dato her her:-----------------------------
-\textbf{Gruppe}:  & \textbf{Dato}: \today
+\textbf{Gruppe}: 93  & \textbf{Dato}: \today
 \\
 \hline 
 \end{tabularx}
@@ -160,7 +140,7 @@ Tittel
 
 \pagestyle{fancy}
 \fancyhf{}
-\lfoot{TTT4280 - Sensor og instrumentering}
+\lfoot{TIØ4252 - Teknologiledelse}
 \rfoot{Side \thepage}
 \renewcommand{\footrulewidth}{0.5pt}
 
@@ -176,6 +156,9 @@ Tittel
 %Akronymliste / Ordforklaring?
 
 \newpage
+\input{deler/Motivasjon}
+\input{deler/Organisasjonsstruktur}
+\input{deler/Mangfold}
 
 \pagenumbering{arabic} %Arabiske tall etter det
 
